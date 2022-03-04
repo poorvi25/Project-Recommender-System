@@ -1,0 +1,36 @@
+Recommender System:
+
+Types:
+
+
+1. Content  - based on content (tags)
+2. Collabritive filtering - based on users similarities
+3. Hybrid - based on above both
+
+
+CONTENT BASED(PROJECT)
+
+1. DATA PREPROCESSING:
+   - Useful columns from movies dataset
+     - id
+     -genre
+     -keyword
+     -title
+     -overview
+     -cast
+     -crew
+
+     new data frame
+     -movied_id | title | tags
+     -tag = Add(overview, genre, cast(top), crew, keywords)
+
+     -genre, keyword is in diff format use a func to convert them in needed format
+     -cast: from cast we want top3 actors of movie
+     -from crew col we only want one having job director
+     -concat all list(columns) and conver to string  -->tag
+     -remove spaces between words as,(apply transform func)
+      (sam abc and sam def then recommender will confuse, have to conver to samabc samdef)
+
+     operation on tag col:
+     -converting each row of tags to vector
+     -we can suggest movie by following its closst vector
