@@ -32,5 +32,21 @@ CONTENT BASED(PROJECT)
       (sam abc and sam def then recommender will confuse, have to conver to samabc samdef)
 
      operation on tag col:
-     -converting each row of tags to vector
+     -converting each row of tags to vector WORDS (Using sklearn countvectorizer)
      -we can suggest movie by following its closst vector
+
+    we have 4806 movies means 4806 vectors-
+    now w have to calculate distance between 2 movies, larger the distance less the similarities
+    --cosine distance is most reliable
+
+for app:
+library stream lit-
+
+to run:
+streamlit run filename.py
+
+pickle library--
+to send data from python file to web page file
+
+make pickle file in ds project
+copy in pycharm app project
